@@ -1,0 +1,48 @@
+<!-- teacher_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ teacher.name }}'s Profile</title>
+</head>
+<body>
+    <!-- link to teacher profile -->
+
+    <h1>{{ teacher.name }}'s Profile</h1>
+
+    <div>
+        <img src="{{ teacher.photo.url }}" alt="{{ teacher.name }} Photo" style="height:100px">
+    </div>
+
+    <h2>Academic Qualifications</h2>
+    <ul>
+        {% for qualification in academic_qualifications %}
+            <li>{{ qualification.degree }} - {{ qualification.university }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Work Experience</h2>
+    <ul>
+        {% for experience in work_experiences %}
+            <li>{{ experience.position }} at {{ experience.institution }} ({{ experience.start_year }} - {% if experience.end_year %}{{ experience.end_year }}{% else %}Present{% endif %})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Teaching Routine</h2>
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Subject</th>
+        </tr>
+        {% for routine in teaching_routines %}
+            <tr>
+                <td>{{ routine.day }}</td>
+                <td>{{ routine.start_time }} - {{ routine.end_time }}</td>
+                <td>{{ routine.subject }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
