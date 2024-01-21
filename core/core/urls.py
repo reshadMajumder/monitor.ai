@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('teacher/<int:teacher_id>/', teacher_profile, name='teacher_profile'),
-    path('teacherAdminPanel/',panel,name="panel")
+    #path('teacherAdminPanel/',panel,name="panels"),
+    #path('teacherAdminPanel/<int:courseId>/',panel,name="panels"),
 
 ]
 

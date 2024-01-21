@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from .models import*
 # Create your views here.
 
-def panel(request):
+def tpanel(request):
+   
     return render(request, 'teacherAdminPanel.html')
