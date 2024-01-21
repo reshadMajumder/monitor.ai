@@ -20,12 +20,14 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from home.views import*
+from teacherAdminPanel.views import*
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('teacher/<int:teacher_id>/', teacher_profile, name='teacher_profile'),
-    
+    path('teacherAdminPanel/',panel,name="panel")
+
 ]
 
 # urls.py
