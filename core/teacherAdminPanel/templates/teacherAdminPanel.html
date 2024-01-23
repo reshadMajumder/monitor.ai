@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Admin Panel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .subject-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .subject {
+            width: 48%;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .active {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .inactive {
+            background-color: #f44336;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Teacher Admin Panel</h1>
+
+
+    <div class="subject-container">
+        <div class="subject">
+            <h2>Mathematics</h2>
+            <p>Details about the Mathematics subject.</p>
+        </div>
+        <div class="subject">
+            <h2>Science</h2>
+            <p>Details about the Science subject.</p>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>Profile</th>
+            <th>Student Name</th>
+            <th>Class Time</th>
+            <th>Performance</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td><img src="teacher_profile.jpg" alt="Teacher Profile"></td>
+            <td>John Doe</td>
+            <td>9:00 AM - 10:30 AM</td>
+            <td>A+</td>
+            <td><span class="status active">Active</span></td>
+        </tr>
+        <tr>
+            <td><img src="teacher_profile.jpg" alt="Teacher Profile"></td>
+            <td>Jane Smith</td>
+            <td>1:30 PM - 3:00 PM</td>
+            <td>d</td>
+            <td><span class="status inactive">Inactive</span></td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+</div>
+
+</body>
+</html>
