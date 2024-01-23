@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import*
 # Create your views here.
 
-def tpanel(request):
-   
-    return render(request, 'teacherAdminPanel.html')
+def panel(request,courseId):
+
+    course=CourseName.objects.get(pk=courseId)
+    context={'course':course}
+    return render(request, 'teacherAdminPanel.html',context)

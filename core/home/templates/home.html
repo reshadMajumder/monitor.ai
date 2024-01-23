@@ -8,8 +8,12 @@
 </head>
 <body>
     <h1>Teachers List</h1>
-    <a href="{% url "panel" %}"><button>Teacher admin panel</button></a>
+    {% for course in courses  %}
+    {{course.name}}
+    <a href="{% url "panel" courseId=course.id %}"><button>Teacher admin panel</button></a>
 
+    {% endfor %}
+    
 
     <ul>
         {% for teacher in teachers %}

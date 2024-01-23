@@ -1,7 +1,9 @@
 # core/views.py
 from django.shortcuts import render
 from teachers.models import Teacher
+from teacherAdminPanel.models import*
 
 def home(request):
     teachers = Teacher.objects.all()
-    return render(request, 'home.html', {'teachers': teachers})
+    course=CourseName.objects.all()
+    return render(request, 'home.html', context={'teachers': teachers,'courses':course})
