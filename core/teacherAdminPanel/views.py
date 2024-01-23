@@ -5,5 +5,7 @@ from .models import*
 def panel(request,courseId):
 
     course=CourseName.objects.get(pk=courseId)
-    context={'course':course}
+    Studentst=StudentStatus.objects.filter(course=course)
+    context={'course':course,'student':Studentst}
+
     return render(request, 'teacherAdminPanel.html',context)
