@@ -83,7 +83,10 @@
 
     <div class="subject-container">
         <div class="subject">
-            <h2>{{ course.name }} </h2>            
+            <h2>{{ course.name }} </h2> 
+            <div>
+                {{ course.description }}
+            </div>           
       
             
         </div>
@@ -93,26 +96,22 @@
     <table>
         <tr>
             
-            <th>{{ student.name }}</th>
+            <th>name</th>
             <th>Class Time</th>
             <th>Performance</th>
             <th>Status</th>
         </tr>
+        {% for student in students  %}
         <tr>
-            <td><img src="teacher_profile.jpg" alt="Teacher Profile"></td>
-            <td>John Doe</td>
-            <td>9:00 AM - 10:30 AM</td>
-            <td>A+</td>
-            <td><span class="status active">Active</span></td>
+            
+            <td> {{ student.name }} </td>
+            <td> {{ student.classTime }} min </td>
+            <td> {{ student.performence }} % </td>
+    
         </tr>
-        <tr>
-            <td><img src="teacher_profile.jpg" alt="Teacher Profile"></td>
-            <td>Jane Smith</td>
-            <td>1:30 PM - 3:00 PM</td>
-            <td>d</td>
-            <td><span class="status inactive">Inactive</span></td>
-        </tr>
-        <!-- Add more rows as needed -->
+        {% endfor %}
+    
+
     </table>
 </div>
 

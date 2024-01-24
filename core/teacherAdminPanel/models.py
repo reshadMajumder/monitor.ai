@@ -4,6 +4,7 @@ from django.db import models
 class CourseName(models.Model):
     course_id = models.CharField(max_length=10 )
     name = models.CharField(max_length=100)
+    description= models.CharField(max_length=300)
     def __str__(self):
         return self.name
 class StudentStatus(models.Model):
