@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Admin Panel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .subject-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .subject {
+            width: 48%;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .active {
+            background-color: #4caf50;
+            color: #fff;
+        }
+
+        .inactive {
+            background-color: #f44336;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Teacher Admin Panel</h1>
+
+
+    <div class="subject-container">
+        <div class="subject">
+            <h2>course name</h2> 
+            <div>
+                <h3>course desc</h3>
+                
+            </div>           
+      
+            
+        </div>
+
+    </div>
+
+    <table>
+        <tr>
+            
+            <th>section</th>
+           
+        </tr>
+        {% for section in section  %}
+        <tr>
+            
+            <td> {{ section.section }} </td>
+
+    
+        </tr>
+        {% endfor %}
+    
+
+    </table>
+</div>
+
+</body>
+</html>

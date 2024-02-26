@@ -15,8 +15,14 @@ class StudentStatus(models.Model):
     performence=models.IntegerField()
     status=models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.name
 
 
 
+class Students (models.Model):
+    section=models.CharField(max_length=2)
+    students=models.ForeignKey( StudentStatus,on_delete=models.CASCADE)
 
-    
+    def __str__(self):
+        return self.section
